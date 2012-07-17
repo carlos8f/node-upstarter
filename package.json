@@ -1,7 +1,7 @@
 {
   "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
   "name": "upstarter",
-  "description": "Easily create upstart services for your node daemons",
+  "description": "Easily create upstart services for your node apps",
   "version": "0.0.0",
   "bin": "./bin/run.sh",
   "dependencies": {
