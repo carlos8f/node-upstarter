@@ -44,6 +44,11 @@ module.exports = function() {
         description: 'Stop on',
         default: 'shutdown'
       },
+      log_output: {
+        description: 'Log output to /var/log/upstart/? (yes/no)',
+        pattern: /^(y(es)?|n(o)?)$/,
+        default: 'yes'
+      },
       user: {
         pattern: /^[a-zA-Z0-9-]+$/,
         description: 'User to run as',
@@ -84,6 +89,7 @@ module.exports = function() {
       process.exit(1);
     }
     result.respawn = result.respawn.match(/^y(es)?$/) ? true : false;
+    result.log_output = result.log_output.match(/^y(es)?$/) ? true : false;
     result.user = result.user === 'root' ? false : result.user;
     var confPath = '/etc/init/' + result.name + '.conf';
     fs.writeFile(confPath, template(result), function(err) {

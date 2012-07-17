@@ -6,7 +6,9 @@ stop on {{stop_on}}
 setuid {{user}}
 {{/if}}
 limit nofile {{nofile_soft}} {{nofile_hard}}
-
+{{#if log_output}}
+console log
+{{/if}}
 script
   {{#if cwd}}
   mkdir -p {{cwd}}
