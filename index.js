@@ -86,7 +86,7 @@ module.exports = function() {
     result.respawn = result.respawn.match(/^y(es)?$/) ? true : false;
     result.user = result.user === 'root' ? false : result.user;
     var confPath = '/etc/init/' + result.name + '.conf';
-    fs.writeFile(, template(result), function(err) {
+    fs.writeFile(confPath, template(result), function(err) {
       if (err) {
         console.error('Error writing file! (Are you root?)');
         console.error(err);
