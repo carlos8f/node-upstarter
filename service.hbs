@@ -1,0 +1,19 @@
+description "{{description}}"
+
+start on {{start_on}}
+stop on {{stop_on}}
+{{#if user}}
+setuid {{user}}
+{{/if}}
+limit nofile {{nofile_soft}} {{nofile_hard}}
+
+script
+  {{#if cwd}}
+  mkdir -p {{cwd}}
+  cd {{cwd}}
+  {{/if}}
+  {{cmd}}
+end script
+{{#if respawn}}
+respawn
+{{/if}}
