@@ -1,12 +1,16 @@
+# {{name}}.conf
+
 description "{{description}}"
 
-start on {{start_on}}
-stop on {{stop_on}}
+start on {{start}}
+stop on {{stop}}
 {{#if user}}
 setuid {{user}}
 {{/if}}
-limit nofile {{nofile_soft}} {{nofile_hard}}
-{{#if log_output}}
+{{#if files}}
+limit nofile {{files}} {{files}}
+{{/if}}
+{{#if log}}
 console log
 {{/if}}
 script

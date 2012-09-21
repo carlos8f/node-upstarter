@@ -3,15 +3,22 @@
   "name": "upstarter",
   "description": "Easily create upstart services for your node apps",
   "version": "0.1.0",
-  "bin": "./bin/run.sh",
+  "bin": "./bin/upstarter",
   "dependencies": {
     "handlebars": "~1.0.5beta",
-    "prompt": "~0.2.2"
+    "commander": "~1.0.4",
+    "async": "~0.1.22"
   },
   "preferGlobal": true,
   "devDependencies": {},
   "optionalDependencies": {},
-  "keywords": ["upstart", "ubuntu", "service", "daemon", "daemonize"],
+  "keywords": [
+    "upstart",
+    "ubuntu",
+    "service",
+    "daemon",
+    "daemonize"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/carlos8f/node-upstarter.git"
