@@ -54,6 +54,7 @@ else {
   } 
   var prompts = {
     name: 'Upstart service name: ',
+    cmd: 'Command(s) to run: (hit enter twice when done)',
     description: 'Upstart service description: ',
     log: 'Log output to /var/log/upstart? (y/n): ',
     user: 'System user to run under: ',
