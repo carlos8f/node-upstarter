@@ -42,7 +42,7 @@ program.parse(process.argv);
 program.start = 'stopped networking';
 program.stop = 'shutdown';
 
-var template = Handlebars.compile(fs.readFileSync(path.resolve('service.hbs'), 'utf8'));
+var template = Handlebars.compile(fs.readFileSync(path.resolve(__dirname, 'service.hbs'), 'utf8'));
 
 if (program.cmd) {
   confirmOk();
