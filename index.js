@@ -24,11 +24,11 @@ program
   .option('--no-ask', 'Run in non-interactive mode')
   .option('-n, --name <name>', 'Upstart service name (must be alpha-numeric/dashes)', defaultName())
   .option('-d, --description <desc>', 'Upstart service description', defaultDesc())
-  .option('-l, --log', 'Log output to /var/log/upstart (default: true)', Boolean, true)
+  .option('--no-log', 'Don\'t log output to /var/log/upstart')
   .option('-u, --user <user>', 'System user to run under (default: root)', 'root')
   .option('-f, --files <num>', 'Set max file descriptors (default: 1000000)', Number, 1000000)
   .option('-c, --cwd <dir>', 'Working directory for process (default: cwd)', process.cwd())
-  .option('-r, --respawn', 'Respawn automatically (default: true)', Boolean, true)
+  .option('--no-respawn', 'Don\'t respawn automatically')
 
 var idx = process.argv.indexOf('--');
 
