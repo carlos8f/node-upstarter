@@ -2,7 +2,7 @@
   "author": "Carlos Rodriguez <carlos@s8f.org> (http://s8f.org/)",
   "name": "upstarter",
   "description": "Easily create upstart services for your node apps",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "bin": "./bin/upstarter",
   "dependencies": {
     "handlebars": "~1.0.5beta",
