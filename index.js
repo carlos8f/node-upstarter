@@ -100,5 +100,6 @@ function writeConf (p, data) {
       process.exit(1);
     }
     console.log('wrote ' + p);
+    process.exit();
   });
 }
