@@ -39,7 +39,7 @@ if (~idx) {
 
 program.parse(process.argv);
 
-program.start = 'stopped networking';
+program.start = 'started networking';
 program.stop = 'runlevel [016]';
 
 var template = Handlebars.compile(fs.readFileSync(path.resolve(__dirname, 'service.hbs'), 'utf8'));
