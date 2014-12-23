@@ -36,6 +36,12 @@ a service conf in `/etc/init`. Then you can:
 $ sudo service my-service start
 ```
 
+Usage - Non Interactive
+=======================
+```bash
+$ sudo upstarter -n $name -d "$description" -c $workingDir --no-ask -- $command
+```
+
 For more info, try the [Upstart cookbook](http://upstart.ubuntu.com/cookbook/).
 
 Happy days!
